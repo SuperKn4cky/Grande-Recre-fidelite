@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  #home-rewards-section {
+    @apply bg-opacity-0 !important;
+  }
+  #rewards-title, #reward-item-1, #reward-item-2, #reward-item-3, #reward-item-4,
+  #reward-item-1-title, #reward-item-1-description,
+  #reward-item-2-title, #reward-item-2-description,
+  #reward-item-3-title, #reward-item-3-description,
+  #reward-item-4-title, #reward-item-4-description,
+  #progress-title, #progress-info, #progress-start, #progress-current, #progress-target, #progress-max, #progress-description, #progress-level, #progress-points-needed, #progress-next-level,
+  #history-title, #transaction-1, #transaction-2, #transaction-3, #transaction-4, #transaction-5, #transaction-6,
+  #transaction-1-description, #transaction-1-points, #transaction-1-date, #transaction-1-montant,
+  #transaction-2-description, #transaction-2-points, #transaction-2-date, #transaction-2-montant,
+  #transaction-3-description, #transaction-3-points, #transaction-3-date, #transaction-3-montant,
+  #transaction-4-description, #transaction-4-points, #transaction-4-date, #transaction-4-montant,
+  #transaction-5-description, #transaction-5-points, #transaction-5-date, #transaction-5-montant,
+  #transaction-6-description, #transaction-6-points, #transaction-6-date, #transaction-6-montant,
+  #earning-points-title, #earning-points-item-1, #earning-points-item-1-text,
+  #earning-points-item-2, #earning-points-item-2-text,
+  #earning-points-item-3, #earning-points-item-3-text,
+  #paliers-progress-title, #paliers-progress-info, #paliers-progress-start, #paliers-progress-current, #paliers-progress-target, #paliers-progress-max, #paliers-progress-description, #paliers-progress-level, #paliers-progress-points-needed, #paliers-progress-next-level,
+  #paliers-list, #paliers-bronze, #paliers-bronze-title, #paliers-bronze-range, #paliers-bronze-benefits-title, #paliers-bronze-benefits-list,
+  #paliers-bronze-benefit-1, #paliers-bronze-benefit-1-text,
+  #paliers-bronze-benefit-2, #paliers-bronze-benefit-2-text,
+  #paliers-bronze-benefit-3, #paliers-bronze-benefit-3-text,
+  #paliers-argent, #paliers-argent-title, #paliers-argent-range, #paliers-argent-benefits-title, #paliers-argent-benefits-list,
+  #paliers-argent-benefit-1, #paliers-argent-benefit-1-text,
+  #paliers-argent-benefit-2, #paliers-argent-benefit-2-text,
+  #paliers-argent-benefit-3, #paliers-argent-benefit-3-text,
+  #paliers-argent-benefit-4, #paliers-argent-benefit-4-text,
+  #paliers-or, #paliers-or-title, #paliers-or-range, #paliers-or-benefits-title, #paliers-or-benefits-list,
+  #paliers-or-benefit-1, #paliers-or-benefit-1-text,
+  #paliers-or-benefit-2, #paliers-or-benefit-2-text,
+  #paliers-or-benefit-3, #paliers-or-benefit-3-text,
+  #paliers-or-benefit-4, #paliers-or-benefit-4-text,
+  #paliers-platine, #paliers-platine-title, #paliers-platine-range, #paliers-platine-benefits-title, #paliers-platine-benefits-list,
+  .bg-white {
+    background-color: transparent !important;
+  }
+  [class*="bg-"] {
+    @apply bg-opacity-20 !important;
+  }
+}
